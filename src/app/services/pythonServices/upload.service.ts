@@ -20,4 +20,11 @@ export class UploadService {
   startSegmentation() {
     return this.http.post<{ message: string }>('http://localhost:5000/start-segmentation', {});
   }
+
+  getSegmentationImage(sliceIndex: number, orientation: string = 'axial') {
+    const url = `http://localhost:5000/visualize-segmentation?slice_index=${sliceIndex}&orientation=${orientation}`;
+    return this.http.get(url, { responseType: 'blob' });
+  }
+  
+
 }

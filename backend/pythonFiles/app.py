@@ -1,12 +1,13 @@
 from flask import Flask, request,jsonify
 from flask_cors import CORS
 import os
-import uploadIMG,segmentation
+import uploadIMG,segmentation,sliceIMG
 
 app = Flask(__name__)
 CORS(app)
 
 UPLOAD_FOLDER = os.path.join(os.getcwd(), 'uploads')
+OUTPUT_FOLDER =os.path.join(os.getcwd(), 'outputs')
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 modality_map = {
@@ -49,7 +50,7 @@ def upload_image():
 @app.route('/start-segmentation', methods=['POST'])
 def doSegmentation():
     try:
-        done = segmentation.segmentationFN()  # call your segmentation function
+        done = segmentation.segmentationFN()  
         if done:
             return jsonify({'message': 'Segmentation completed successfully!'})
         else:
@@ -57,5 +58,31 @@ def doSegmentation():
     except Exception as e:
         return jsonify({'message': f'Error during segmentation: {str(e)}'}), 500
     
+
+from flask import send_file
+
+@app.route('/visualize-segmentation', methods=['GET'])
+def visualize_segmentation():
+    try:
+        slice_index = int(request.args.get('slice_index', 70))
+        orientation = request.args.get('orientation', 'axial')
+        id=0
+        image_file = os.path.join("uploads/0", "BraTS2021_0000_0000.nii.gz") 
+        segmentation_file =  os.path.join("outputs", "BraTS2021_0000.nii.gz")
+        output_path = os.path.join("outputs", "visualization.png")
+
+        sliceIMG.visualize_segmentation_slice_greybg_label0grey(
+            image_path=image_file,
+            segmentation_path=segmentation_file,
+            output_path=output_path,
+            slice_index=slice_index,
+            orientation=orientation
+        )
+
+        return send_file(output_path, mimetype='image/png')
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 if __name__ == '__main__':
     app.run(debug=True)
