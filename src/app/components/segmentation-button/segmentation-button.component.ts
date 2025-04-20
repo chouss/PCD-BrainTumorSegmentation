@@ -9,10 +9,11 @@ import { UploadService } from '../../services/pythonServices/upload.service';
 })
 export class SegmentationButtonComponent {
   constructor(private dataService: UploadService) {}
-  
-  uploadResponse: string = 'Nothing yet';
+
+  uploadResponse: string = '...';
 
   DoSegmentation() {
+    this.uploadResponse="Segmentating, please wait..."
     this.dataService.startSegmentation().subscribe({
       next: (res) => {
         this.uploadResponse = res.message;
