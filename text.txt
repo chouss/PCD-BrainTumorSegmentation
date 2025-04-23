@@ -1,0 +1,12 @@
+
+###  ouss infos
+"modality": {
+        "0": "T1",
+        "1": "T1ce",
+        "2": "T2",
+        "3": "FLAIR"
+    },
+
+to bypass bach :
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
