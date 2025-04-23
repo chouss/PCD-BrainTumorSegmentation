@@ -1,0 +1,21 @@
+.site-footer {
+    background-color: #1e1e2f;
+    color: #ffffff;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.95rem;
+  }
+  
+  .footer-content p {
+    margin: 0.3rem 0;
+    font-weight: 400;
+  }
+  
+  @media (max-width: 600px) {
+    .site-footer {
+      font-size: 0.85rem;
+      padding: 1rem;
+    }
+  }
+  

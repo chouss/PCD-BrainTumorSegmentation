@@ -1,0 +1,39 @@
+.segmentation-container {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  /* Stylish Button */
+  .segmentation-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .segmentation-btn:hover {
+    background-color: #43a047;
+    transform: translateY(-2px);
+  }
+  
+  /* Upload response */
+  .segmentation-response {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #2196f3; /* Default blue */
+  }
+  
+  /* You can also add classes for success or error like this: */
+  .segmentation-response.success {
+    color: #4caf50;
+  }
+  
+  .segmentation-response.error {
+    color: #f44336;
+  }
+  

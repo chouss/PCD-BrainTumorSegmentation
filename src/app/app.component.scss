@@ -1,0 +1,12 @@
+/* Make the wrapper fill the entire height of the page */
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Make the main content grow to fill space */
+  .app-content {
+    flex: 1;
+  }
+  

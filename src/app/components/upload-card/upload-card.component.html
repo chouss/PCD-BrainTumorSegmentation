@@ -1,6 +1,9 @@
 <div>
   <p> {{typeIMG}}</p> 
-  <input type="file" (change)="onFileSelected($event)" />
-  <p>{{uploadResponse}}</p>
+   <label class="upload-btn">
+    Choose File
+    <input type="file" (change)="onFileSelected($event)" hidden />
+   </label>
+  <p class="upload-response">{{uploadResponse}}</p>
 
 </div>

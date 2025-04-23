@@ -1,13 +1,21 @@
-<p>generate slice </p>
-<select [(ngModel)]="orientation">
-    <option value="axial">Axial</option>
-    <option value="coronal">Coronal</option>
-    <option value="sagittal">Sagittal</option>
-</select>
-<input type="number" [(ngModel)]="selectedSlice" placeholder="Enter slice number" /> enter slice number
-<button (click)="DoVisualizeSlice()">Visualize Slice</button>
-
-<div *ngIf="segmentationImgUrl">
-    <h4>Result:</h4>
-    <img [src]="segmentationImgUrl" alt="Segmentation Slice" style="max-width: 50%; border: 1px solid #ccc; padding: 10px;" />
+<div class="slice-section">
+    <p class="section-title">Generate Slice</p>
+  
+    <div class="controls">
+      <select [(ngModel)]="orientation" class="select-control">
+        <option value="axial">Axial</option>
+        <option value="coronal">Coronal</option>
+        <option value="sagittal">Sagittal</option>
+      </select>
+  
+      <input type="number" [(ngModel)]="selectedSlice" placeholder="Enter slice number" class="input-control" />
+      
+      <button (click)="DoVisualizeSlice()" class="slice-btn">Visualize Slice</button>
+    </div>
+  
+    <div *ngIf="segmentationImgUrl" class="result">
+      <h4>Result:</h4>
+      <img [src]="segmentationImgUrl" alt="Segmentation Slice" />
+    </div>
   </div>
+  

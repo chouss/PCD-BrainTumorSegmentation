@@ -1,0 +1,51 @@
+.slice-section {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  
+  .select-control, .input-control {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    outline: none;
+    min-width: 180px;
+  }
+  
+  .slice-btn {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .slice-btn:hover {
+    background-color: #1565c0;
+  }
+  
+  .result img {
+    max-width: 40%;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 10px;
+    margin-top: 1rem;
+  }
+  
