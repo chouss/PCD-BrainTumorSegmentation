@@ -1,0 +1,15 @@
+.profile-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+
+  .marouene-card {
+    display: flex;
+    justify-content: center;
+    align-items: center; // Optional: for vertical centering
+    height: 100%; // Optional: make sure parent allows vertical centering
+    margin-top: 2rem; // spacing from top
+  }

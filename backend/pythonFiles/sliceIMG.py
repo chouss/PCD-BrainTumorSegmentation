@@ -55,7 +55,7 @@ def visualize_segmentation_slice_greybg_label0grey(image_path, segmentation_path
         plt.imshow(segmentation_slice, cmap=custom_seg_cmap, alpha=0.5, vmin=0, vmax=3) # Assuming labels 0, 1, 2, 3
 
         # Add colorbar for segmentation labels (optional)
-        plt.colorbar(ticks=[0, 1, 2, 3], label='Segmentation Labels') # Adjust ticks if your labels are different
+        plt.colorbar(ticks=[ 0, 1, 2, 3], label='Segmentation Labels') # Adjust ticks if your labels are different
         colorbar = plt.gca().images[-1].colorbar # Get the colorbar object
         colorbar.set_ticks([0, 1, 2, 3]) # Ensure ticks are still at 0, 1, 2, 3
         colorbar.set_ticklabels(['0 (Grey)', '1', '2', '3']) # Update tick labels to indicate 0 is grey
