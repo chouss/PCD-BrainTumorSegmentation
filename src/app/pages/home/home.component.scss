@@ -1,0 +1,139 @@
+// Global container styles for the entire content
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;  // Allows responsiveness for smaller screens
+  }
+  
+
+  .objectives {
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    flex: 1 1 100%; 
+    margin-top: 20px ;
+  }
+  
+
+  .objectives-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+
+  .objectives-image img {
+    max-width: 300px; 
+    height: auto;
+    border-radius: 8px;
+  }
+  
+
+  .objectives-text {
+    flex: 1; 
+    line-height: 2;
+  }
+  
+  .objectives-text h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    color:  #1e1e2f;
+  }
+  
+  .objectives-text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+
+  }
+  
+
+  .results {
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    flex: 1 1 100%; 
+  }
+  
+
+  .results h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    color:  #1e1e2f; 
+  }
+  
+  
+  .results-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap; 
+  }
+  
+  
+  .text-left {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .text-left p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+  }
+  
+  // Styling for the table 
+  .table-right {
+    flex: 1;
+    max-width: 50%; 
+    overflow-x: auto; 
+  }
+  
+  .results-table {
+    width: 100%;
+    border-collapse: collapse;
+  
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+  
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+  
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+  }
+  
+  // for smaller screens
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column; 
+    }
+  
+    .results-content {
+      flex-direction: column; 
+    }
+  
+    .table-right {
+      max-width: 100%; 
+      margin-top: 20px; 
+    }
+  }
+  

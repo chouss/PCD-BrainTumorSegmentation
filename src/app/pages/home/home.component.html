@@ -1,1 +1,66 @@
-<p>home works!</p>
+<div class="objectives">
+    <div class="objectives-content">
+      <div class="objectives-image">
+        <img src="/imgs/visualization.png" alt="Objective Image" />
+      </div>
+      <div class="objectives-text">
+        <h2>Objectives</h2>
+        <p>
+          Our project aims to improve brain tumor segmentation, particularly for gliomas, which affect over 300,000 people annually. While MRI is essential for diagnosis, interpreting scans remains complex. Traditional manual segmentation by radiologists is time-consuming, costly, and prone to error. Deep learning offers a promising solution, yet challenges persist due to tumor variability in size, location, and type. To address this, we refine AI-based models to enhance segmentation accuracy, provide precise tumor interpretation, and develop an intuitive interface for healthcare professionals. Using the state-of-the-art nnUNet framework and multi-modal MRI datasets like BRATS 21, our approach improves detection and streamlines the diagnostic process, ultimately benefiting patient outcomes and reducing healthcare burdens.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="results">
+    <h2>Results and Discussion</h2>
+    <div class="results-content">
+      <div class="text-left">
+        <p>
+          Based on evaluation on the BraTS 2021 dataset, the segmentation model exhibits strong foreground segmentation performance, achieving a mean Dice score of 84.45%, indicating substantial overlap between predicted and ground truth tumor regions. The mean Intersection over Union (IoU) further supports this, reaching 76.78% and confirming high volumetric segmentation accuracy. In terms of tumor identification within the BraTS 2021 dataset, the model demonstrates a high Sensitivity of approximately 88.6%, signifying its ability to correctly detect a large proportion of the actual tumor regions within the foreground.
+        </p>
+        <p>To provide a more detailed view of the segmentation performance, the metrics are further broken down for each individual tissue class. The following table presents the Dice score, Intersection over Union (IoU), and Sensitivity for each class, offering insights into the model's performance in segmenting the background and the distinct tumor subregions:</p>
+      </div>
+      
+      <div class="table-right">
+        <table class="results-table">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Dice Score</th>
+              <th>IoU</th>
+              <th>Sensitivity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Background</td>
+              <td>84.45%</td>
+              <td>76.78%</td>
+              <td>88.6%</td>
+            </tr>
+            <tr>
+              <td>Whole Tumor</td>
+              <td>85.10%</td>
+              <td>77.20%</td>
+              <td>89.5%</td>
+            </tr>
+            <tr>
+              <td>Enhancing Tumor</td>
+              <td>81.30%</td>
+              <td>73.90%</td>
+              <td>87.2%</td>
+            </tr>
+            <tr>
+              <td>Edema</td>
+              <td>80.25%</td>
+              <td>72.10%</td>
+              <td>85.3%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
