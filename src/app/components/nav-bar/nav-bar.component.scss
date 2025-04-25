@@ -1,19 +1,28 @@
-div {
-    background-color: #1e1e2f; 
+.navbar {
+    background-color: #1e1e2f;
     padding: 1rem 2rem;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute items */
+    align-items: center; /* Vertically align items */
+}
 
-  }
-  
-  ul {
+.navbar-title {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar-nav {
     list-style: none;
     display: flex;
-    justify-content: center;
     gap: 2rem;
     margin: 0;
     padding: 0;
-  }
-  
-  li a {
+    flex-grow: 1; /* Allow nav links to take up available space */
+    justify-content: center; /* Center the nav links */
+}
+
+.navbar-nav li a {
     text-decoration: none;
     color: #ffffff;
     font-weight: 500;
@@ -21,14 +30,14 @@ div {
     transition: color 0.3s ease, border-bottom 0.3s ease;
     padding-bottom: 5px;
     position: relative;
-  }
-  
-  li a:hover {
-    color: #4fc3f7; 
-  }
-  
-  /* underline on hover */
-  li a::after {
+}
+
+.navbar-nav li a:hover {
+    color: #4fc3f7;
+}
+
+/* underline on hover */
+.navbar-nav li a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -39,10 +48,26 @@ div {
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease;
-  }
-  
-  li a:hover::after {
+}
+
+.navbar-nav li a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
-  }
-  
+}
+
+.navbar-signup a {
+    text-decoration: none;
+    color: #1e1e2f; 
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #143d50;
+    border-radius: 2px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #ffffff; 
+}
+
+.navbar-signup a:hover {
+    background-color: #1e1e2f; 
+    color: #ffffff; 
+}
