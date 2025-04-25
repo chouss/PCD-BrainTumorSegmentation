@@ -6,6 +6,11 @@ import { SegmentationSpaceComponent } from './pages/segmentation-space/segmentat
 
 export const routes: Routes = [
     {
+        path: '',
+        redirectTo: 'Home',
+        pathMatch: 'full'
+    },
+    {
         path:'Home',
         component :HomeComponent
     },
@@ -17,8 +22,6 @@ export const routes: Routes = [
         path: 'Segmentation-Space',
         component:SegmentationSpaceComponent
     }
-
-
 
 
 ];
